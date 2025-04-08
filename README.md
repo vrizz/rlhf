@@ -1,8 +1,15 @@
 # RLHF
 ![rlhf](https://github.com/user-attachments/assets/db7ce021-a043-4567-8e04-8fffcb8bc700)
 
-A minimal implementation of reward model training and PPO fine-tuning with the [Hugging Face trl library](https://huggingface.co/docs/trl/en/index).
+An implementation of **Reinforcement Learning from Human Feedback (RLHF)** using Hugging Face's [`trl`](https://huggingface.co/docs/trl) library.
 
-🏆 `reward_train.ipynb`:  This notebook fine-tunes "distilroberta-base" as a reward model using the "trl-lib/lm-human-preferences-descriptiveness" dataset, which contains human-ranked text pairs (preferred vs. rejected responses). The trained reward model learns to assign scores that reflect alignment with human preferences for descriptiveness.
+## 🏆 Reward Model Fine-Tuning (`reward_train.ipynb`)
+- **Model:** `distilroberta-base`
+- **Dataset:** [`trl-lib/lm-human-preferences-descriptiveness`](https://huggingface.co/datasets/trl-lib/lm-human-preferences-descriptiveness) (human-ranked text pairs)
+- **Objective:** Learns to score text based on alignment with human preferences for descriptiveness
 
-🦾 `ppo_train.ipynb`: This notebook fine-tunes GPT-2 using reinforcement learning with Proximal Policy Optimization (PPO), where the model's responses are evaluated and improved based on a reward signal from the "argilla/roberta-base-reward-model-falcon-dolly" classification model, while training is performed on the "argilla/databricks-dolly-15k-curated-en" dataset, which contains 15,000 curated instruction-response pairs.
+## 🦾 PPO Fine-Tuning (`ppo_train.ipynb`)
+- **Base Model:** GPT-2
+- **Reward Model:** [`argilla/roberta-base-reward-model-falcon-dolly`](https://huggingface.co/argilla/roberta-base-reward-model-falcon-dolly)
+- **Dataset:** [`argilla/databricks-dolly-15k-curated-en`](https://huggingface.co/datasets/argilla/databricks-dolly-15k-curated-en) (15K instruction-response pairs)
+- **Objective:** Improves response quality (e.g., coherence, descriptiveness) on instruction-following tasks
