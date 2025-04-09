@@ -1,5 +1,5 @@
 # RLHF
-[![wandb badge](https://github.com/wandb/assets/blob/main/wandb-github-badge.svg)](https://wandb.ai/valer/rlhf)
+[![wandb badge](https://github.com/wandb/assets/blob/main/wandb-github-badge.svg)](https://wandb.ai/valer/rlhf/reports/Reinforcement-Learning-from-Human-Feedback-RLHF---VmlldzoxMjIwMTA2MA)
 
 ![rlhf](https://github.com/user-attachments/assets/db7ce021-a043-4567-8e04-8fffcb8bc700)
 
