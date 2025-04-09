@@ -1,4 +1,6 @@
 # RLHF
+[![wandb badge](https://github.com/wandb/assets/blob/main/wandb-github-badge.svg)](https://wandb.ai/valer/rlhf)
+
 ![rlhf](https://github.com/user-attachments/assets/db7ce021-a043-4567-8e04-8fffcb8bc700)
 
 An implementation of **Reinforcement Learning from Human Feedback (RLHF)** using Hugging Face's [`trl`](https://huggingface.co/docs/trl) library.
